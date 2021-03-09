@@ -1,0 +1,3 @@
+% other
+
+pkg-config --list-all

@@ -1,0 +1,4 @@
+% cmake
+
+# 生成coc.nvim需要的补全文件
+cmake ../ -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
