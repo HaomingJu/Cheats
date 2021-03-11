@@ -1,0 +1,21 @@
+% tar
+
+# 打包*.tar
+
+tar -cvf out_folder.tar in_folder/
+
+# 解包*.tar
+
+tar -xvf <tar_name>.tar
+
+$ tar_name: ls *.tar | tr ' ' '\n'
+
+# 打包*.tar.gz
+
+tar -zcvf out_folder.tar.gz in_folder/
+
+# 解包*.tar.gz
+
+tar -zxvf <tar_name>.tar.gz
+
+$ tar_name: ls *.tar.gz | tr ' ' '\n'

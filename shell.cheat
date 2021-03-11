@@ -1,0 +1,12 @@
+% shell
+
+# 时间 2021年03月10日 星期三 10时13分33秒
+date +%c
+
+% replace
+
+# 查看哪些文件准备替换
+ag -l -w <source_text>
+
+# 全局替换字符串
+ag -l -w <source_text>  | xargs sed -i 's/<source_text>/<dest_text>/g'

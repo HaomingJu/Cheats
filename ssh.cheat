@@ -1,0 +1,6 @@
+% ssh
+
+# 将秘钥写入远程机器, 下次直接使用秘钥登录
+
+ssh-copy-id -i ~/.ssh/id_rsa.pub <remote_ip>
+$ remote_ip: cat /etc/hosts  | awk -F '#'  '($1) { print $1}' | awk '{print $NF}'

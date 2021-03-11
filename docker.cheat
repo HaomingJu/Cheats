@@ -1,0 +1,14 @@
+% docker
+
+# 创建一个后台运行的容器
+
+sudo docker run -it -d --name <container_name> <image_tag> bash
+
+$ image_tag: docker image ls  | awk 'NR > 1 {print $1":"$2}'
+
+# 进入后台容器终端
+
+sudo docker exec -it <container_name> bash
+
+$ container_name: docker container ls --all | awk 'NR > 1 {print $NF}'
+
