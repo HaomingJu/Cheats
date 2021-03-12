@@ -1,0 +1,4 @@
+% doc
+
+# 用浏览器打开一个Devdocs
+google-chrome --no-proxy-server --new-window 127.0.0.1:9292

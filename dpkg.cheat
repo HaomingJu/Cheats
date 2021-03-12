@@ -1,0 +1,19 @@
+% dpkg
+
+# 列出所有已安装的软件包
+pkg-config --list-all
+
+# peek软件源
+sudo add-apt-repository ppa:peek-developers/stable
+
+# install autoreconf
+sudo apt-get install autoconf automake libtool
+
+# install apt-file
+sudo apt install apt-file && sudo apt-file update
+
+# 查找某个动态库归属于哪个包 1
+sudo apt-file search <library_name>
+
+# 查找某个动态库归属于哪个包 2
+dpkg -S <library_name>
