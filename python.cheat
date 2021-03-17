@@ -1,0 +1,6 @@
+
+% pip
+
+# 配置pip全局源
+
+sudo pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple

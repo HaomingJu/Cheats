@@ -1,0 +1,10 @@
+% gcc
+
+# gcc展开宏MACRO
+
+gcc -E c.cc > c.expends
+
+# g++展开宏MACRO
+
+g++ -E c.cc
+

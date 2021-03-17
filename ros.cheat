@@ -1,0 +1,6 @@
+% catkin-tool
+
+# 使得catkin build生成install目录
+
+catkin config --install
+
