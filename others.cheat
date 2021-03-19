@@ -2,3 +2,15 @@
 
 # axel多线程下载
 axel -n 4 -a https://dl2.xmind.cn/xmind-8-update9-linux.zip
+
+% devdocs
+
+# 下载源码
+git clone --depth 1 https://github.com/freeCodeCamp/devdocs.git && cd devdocs
+
+# 创建devdocs镜像
+sudo docker build -t thibaut/devdocs .
+
+# 启动服务devdocs镜像
+sudo docker run -it --restart=always --name devdocs -d -p 9292:9292 thibaut/devdocs
+
