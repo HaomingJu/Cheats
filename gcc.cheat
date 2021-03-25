@@ -1,10 +1,16 @@
 % gcc
 
 # gcc展开宏MACRO
-
 gcc -E c.cc > c.expends
 
 # g++展开宏MACRO
-
 g++ -E c.cc
 
+# distcc gcc分布式编译工具
+sudo apt install -y distcc distccmon-gnome
+
+# distcc-gnome 可视化查看集群工作情况
+distccmon-gnome
+
+# distcc 查看集群列表
+distcc --show-hosts

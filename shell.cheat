@@ -10,3 +10,7 @@ ag -l -w <source_text>
 
 # 全局替换字符串
 ag -l -w <source_text>  | xargs sed -i 's/<source_text>/<dest_text>/g'
+
+# tmpfs
+
+sudo mount -t tmpfs tmpfs <path> -o size=<size>

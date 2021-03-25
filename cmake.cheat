@@ -1,9 +1,7 @@
 % cmake
 
 # 生成coc.nvim需要的补全文件
-
 cmake ../ -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
 
 # 依据CMakeLists.txt生成依赖关系图
-
 cmake ../ --graphviz=graphviz.dot && dot -Tpng -o graphviz.png ./graphviz.dot
