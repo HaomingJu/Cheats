@@ -11,6 +11,11 @@ ag -l -w <source_text>
 # 全局替换字符串
 ag -l -w <source_text>  | xargs sed -i 's/<source_text>/<dest_text>/g'
 
+# 代码可读性增强
+ag -w -l <macro_name> | xargs -I @ unifdef @ -D <macro_name> -o @
+
 # tmpfs
 
 sudo mount -t tmpfs tmpfs <path> -o size=<size>
+
+

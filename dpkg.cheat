@@ -17,3 +17,6 @@ sudo apt-file search <library_name>
 
 # 查找某个动态库归属于哪个包 2
 dpkg -S <library_name>
+
+# 代码可读性增强工具unifdef
+sudo apt install unifdef
