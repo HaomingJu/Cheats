@@ -19,3 +19,24 @@ ag -w -l <macro_name> | xargs -I @ unifdef @ -D <macro_name> -o @
 sudo mount -t tmpfs tmpfs <path> -o size=<size>
 
 
+% vim
+
+# complie
+
+./configure \
+    --with-features=huge \
+    --enable-multibyte \
+    --enable-rubyinterp=yes \
+    --enable-pythoninterp=dynamic \
+    --with-python-command=`which python2.7` \
+    --with-python-config-dir=`python2.7-config  --configdir` \
+    --enable-python3interp=dynamic \
+    --with-python3-command=`which python3.8` \
+    --with-python3-config-dir=`python3.8-config --configdir` \
+    --enable-perlinterp=yes \
+    --enable-luainterp=yes  \
+    --enable-cscope \
+    --with-x 2>&1 | grep python
+
+# terminal
+sudo apt install sakura
