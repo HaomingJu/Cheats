@@ -19,3 +19,6 @@ sudo docker image ls | awk 'NR>1{print $1":"$2}' | xargs sudo docker image rm
 
 # 删除所有容器
 sudo docker container ls --all | awk 'NR>1 {print $1}' | xargs sudo docker container rm
+
+# 重新启动服务
+sudo systemctl restart docker
