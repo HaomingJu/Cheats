@@ -1,0 +1,12 @@
+% mouse
+
+# 更改鼠标大小
+dconf write /org/gnome/desktop/interface/cursor-size <size>
+
+
+
+% terminal
+# 设定Ctrl+Alt+T快捷键打开终端
+sudo apt install sakura
+gsettings set org.gnome.desktop.default-applications.terminal exec-arg "-x"
+gsettings set org.gnome.desktop.default-applications.terminal exec /usr/bin/gnome-terminal

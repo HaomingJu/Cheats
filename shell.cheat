@@ -38,7 +38,3 @@ sudo mount -t tmpfs tmpfs <path> -o size=<size>
     --enable-cscope \
     --with-x 2>&1 | grep python
 
-# terminal
-sudo apt install sakura
-gsettings set org.gnome.desktop.default-applications.terminal exec-arg "-x"
-gsettings set org.gnome.desktop.default-applications.terminal exec /usr/bin/terminator
