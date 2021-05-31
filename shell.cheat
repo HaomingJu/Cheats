@@ -38,3 +38,8 @@ sudo mount -t tmpfs tmpfs <path> -o size=<size>
     --enable-cscope \
     --with-x 2>&1 | grep python
 
+% tar_zip
+
+# zip
+zip -r -q -y <zip>.zip <zip>
+
