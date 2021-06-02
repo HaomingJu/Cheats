@@ -43,3 +43,8 @@ sudo mount -t tmpfs tmpfs <path> -o size=<size>
 # zip
 zip -r -q -y <zip>.zip <zip>
 
+# 版本管理 配置
+update-alternatives: --install <链接> <名称> <路径> <优先级>
+
+# 版本管理 选择
+update-alternatives: --config <名称>
