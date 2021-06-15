@@ -23,6 +23,7 @@ sudo mount -t tmpfs tmpfs <path> -o size=<size>
 
 # complie
 
+sudo apt install libncurses5-dev && \
 ./configure \
     --with-features=huge \
     --enable-multibyte \
@@ -36,7 +37,7 @@ sudo mount -t tmpfs tmpfs <path> -o size=<size>
     --enable-perlinterp=yes \
     --enable-luainterp=yes  \
     --enable-cscope \
-    --with-x 2>&1 | grep python
+    --enable-gui-auto 
 
 % tar_zip
 
