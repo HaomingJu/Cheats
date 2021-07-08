@@ -20,3 +20,8 @@ dpkg -S <library_name>
 
 # 代码可读性增强工具unifdef
 sudo apt install unifdef
+
+
+% apt
+# 源指纹认证
+sudo gpg --keyserver keyserver.ubuntu.com --recv <FIGURE_ID> && sudo gpg --export --armor <FIGURE_ID> | sudo apt-key add -

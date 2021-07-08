@@ -49,3 +49,11 @@ update-alternatives: --install <链接> <名称> <路径> <优先级>
 
 # 版本管理 选择
 update-alternatives: --config <名称>
+
+% nvidia
+
+# nvidia 显示推荐驱动
+ubuntu-drivers devices
+
+# nvidia 自动按照推荐驱动
+sudo ubuntu-drivers autoinstall
