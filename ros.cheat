@@ -4,3 +4,8 @@
 
 catkin config --install
 
+# 安装catkin
+sudo python -m pip install catkin-tools
+
+# catkin 编译
+catkin build
