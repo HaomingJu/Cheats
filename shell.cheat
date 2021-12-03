@@ -3,6 +3,9 @@
 # 时间 2021年03月10日 星期三 10时13分33秒
 date +%c
 
+# 2021-12-03
+date --iso-8601
+
 % replace
 
 # 查看哪些文件准备替换
@@ -57,3 +60,10 @@ ubuntu-drivers devices
 
 # nvidia 自动按照推荐驱动
 sudo ubuntu-drivers autoinstall
+
+% kill
+
+# 杀掉批量进程
+kill `ps -ef | grep <grep_keyword> | awk '{print $2}'`
+
+
