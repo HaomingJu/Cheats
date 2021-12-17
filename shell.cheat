@@ -67,3 +67,17 @@ sudo ubuntu-drivers autoinstall
 kill `ps -ef | grep <grep_keyword> | awk '{print $2}'`
 
 
+
+% hexdump
+hexdump -C -n <要显示多少字节> <二进制文件>
+
+
+% sqlite DELETE
+DELETE FROM <TableName> WHERE <Condition>
+
+% sqlite SELECT
+SELECT * FROM <TableName> WHERE <Condition>
+
+
+% sqlite INSERT
+INSERT INTO <TableName> (<COLUMN1>, <COLUMN2>) VALUES (<values1>, <values2>)
