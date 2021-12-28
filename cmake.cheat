@@ -1,7 +1,16 @@
 % cmake
 
 # 生成coc.nvim需要的补全文件
-cmake ../ -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+cmake ../ -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/opt/trunk_master
 
 # 依据CMakeLists.txt生成依赖关系图
 cmake ../ --graphviz=graphviz.dot && dot -Tpng -o graphviz.png ./graphviz.dot
+
+# 加入-fPIC
+cmake .. -DCMAKE_POSITION_INDEPENDENT_CODE=ON
+
+
+% make
+
+# 多线程构建
+make -j$(nproc)
