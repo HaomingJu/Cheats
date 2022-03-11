@@ -15,7 +15,7 @@ $ container_name: docker container ls --all | awk 'NR > 1 {print $NF}'
 sudo docker image ls | awk 'NR>1{print $1":"$2}'
 
 # 删除所有镜像
-sudo docker image ls | awk 'NR>1{print $1":"$2}' | xargs sudo docker image rm
+sudo docker image ls | awk 'NR>1{print $3}' | xargs sudo docker image rm
 
 # 删除所有容器
 sudo docker container ls --all | awk 'NR>1 {print $1}' | xargs sudo docker container rm
