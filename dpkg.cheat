@@ -3,12 +3,6 @@
 # 列出所有已安装的软件包
 pkg-config --list-all
 
-# peek软件源
-sudo add-apt-repository -y ppa:peek-developers/stable
-
-# timeshift
-sudo add-apt-repository -y ppa:teejee2008/timeshift
-
 # install autoreconf
 sudo apt-get install autoconf automake libtool
 
@@ -24,10 +18,11 @@ dpkg -S <library_name>
 # 代码可读性增强工具unifdef
 sudo apt install unifdef
 
-# cmake
-sudo sh -c 'echo "deb https://apt.kitware.com/ubuntu/ $(lsb_release -sc) main" > /etc/apt/sources.list.d/cmake-latest.list'
+# list debs 可以列出某个特定软件仓库的软件
+cat /var/lib/apt/lists/*Packages | gerp Package
 
-% apt
-# 源指纹认证
-sudo gpg --keyserver keyserver.ubuntu.com --recv <FIGURE_ID> && sudo gpg --export --armor <FIGURE_ID> | sudo apt-key add -
+# store debs path 存储deb软件包的路径
+cd /var/cache/apt/archives/
 
+# arch(查看软件架构)
+dpkg --print-architecture

@@ -1,0 +1,33 @@
+% sources
+
+# key
+sudo gpg --keyserver keyserver.ubuntu.com --recv <FIGURE_ID> && sudo gpg --export --armor <FIGURE_ID> | sudo apt-key add -
+
+# 添加仓库公钥
+curl http://10.11.100.2:8081/dists/trunk/Release.gpg  | sudo apt-key add -
+
+
+# 清华源(ubuntu)
+echo "\
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ `lsb_release -c -s` main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ `lsb_release -c -s`-updates main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ `lsb_release -c -s`-backports main restricted universe multiverse
+deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ `lsb_release -c -s`-security main restricted universe multiverse"
+
+# 清华源(ros)
+echo "deb https://mirrors.tuna.tsinghua.edu.cn/ros/ubuntu/ `lsb_release -c -s` main"
+
+# 清华源(ros2)
+echo "deb [arch=`dpkg --print-architecture`] https://mirrors.tuna.tsinghua.edu.cn/ros2/ubuntu/ `lsb_release -c -s` main"
+
+# 官方源(cmake/kitware)
+echo "deb https://apt.kitware.com/ubuntu/ `lsb_release -c -s` main"
+
+# peek软件源
+sudo add-apt-repository -y ppa:peek-developers/stable
+
+# timeshift 软件源
+sudo add-apt-repository -y ppa:teejee2008/timeshift
+
+# git软件源
+sudo add-apt-repository ppa:git-core/ppa

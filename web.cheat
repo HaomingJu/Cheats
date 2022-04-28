@@ -6,6 +6,7 @@ google-chrome --no-proxy-server --new-window <url>
 $ url: cat ~/.vim/Cheats/bookmark.list --- --column 3 --header-lines 1 --delimiter '\s\s+'
 
 
+
 % proxy
 
 # 命令行设置代理

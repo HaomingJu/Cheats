@@ -73,4 +73,12 @@ INSERT INTO <TableName> (<COLUMN1>, <COLUMN2>) VALUES (<values1>, <values2>)
 % fonts 安装字体(Ubuntu18.04LTS)
 sudo apt install fonts-firacode
 
+% curl
+# curl 调用REST APIs
+curl --include --header "PRIVATE-TOKEN: <access_token>"   http://192.168.3.148/api/v4/users\?page\=1 --user-agent  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/74.0.3729.169 Safari/537.36' 
+
+
+% gpg
+# gpg 快捷生成主密钥对()
+gpg --batch --passphrase "" --quick-generate-key "aptly (key for aptly) <aptly@aptly.info>" rsa1024 default never
 
