@@ -22,3 +22,8 @@ sudo docker container ls --all | awk 'NR>1 {print $1}' | xargs sudo docker conta
 
 # 重新启动服务
 sudo systemctl restart docker
+
+# add user to docker group 将用户添加到docker组
+sudo gpasswd -a <user_name> docker
+
+$ user_name: cat /etc/passwd | grep home  | awk -F ':' '{print $1}'

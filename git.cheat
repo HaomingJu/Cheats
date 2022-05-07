@@ -1,6 +1,14 @@
 % git
 
-# Change branch
+# change branch()
 git checkout <branch>
 
 $ branch: git branch -a | awk '{print $NF}'
+
+# commit daily(日常提交)
+git commit -m "`date --iso-8601`"
+
+
+# set upstream(设置分支的远程跟踪)
+git push -u origin <origin_branch>
+$ origin_branch: git branch -r --no-color | grep -v HEAD  | awk -F '/' '{print $2}'

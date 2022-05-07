@@ -1,0 +1,10 @@
+% aptly
+
+# update 强制刷新仓库
+curl -X PUT -H 'Content-Type: application/json' --data '{"ForceOverwrite":true}' http://10.11.100.8:8083/api/publish/trunk/xenial
+
+# show repos 查看所有仓
+curl -X GET http://10.11.100.8:8083/api/repos
+
+# show packages 查看某个仓库所有包
+curl -X GET http://10.11.100.8:8083/api/repos/<repo_name>/packages
