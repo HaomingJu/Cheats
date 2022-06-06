@@ -27,3 +27,7 @@ sudo systemctl restart docker
 sudo gpasswd -a <user_name> docker
 
 $ user_name: cat /etc/passwd | grep home  | awk -F ':' '{print $1}'
+
+# execute script(在容器上后台执行一个命令)
+sudo docker exec -it <docker_name> /bin/bash -c 'gitlab-runner restart'
+$ docker_name: docker container ls --all | awk 'NR>1 {print $NF}'

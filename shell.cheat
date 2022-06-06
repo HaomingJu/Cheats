@@ -82,3 +82,9 @@ curl --include --header "PRIVATE-TOKEN: <access_token>"   http://192.168.3.148/a
 # gpg 快捷生成主密钥对()
 gpg --batch --passphrase "" --quick-generate-key "aptly (key for aptly) <aptly@aptly.info>" rsa1024 default never
 
+
+% jq
+# urlencode (url编码)
+echo "<data>" | jq -Rr @uri
+
+# urldecode (url解码)

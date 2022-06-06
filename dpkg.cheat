@@ -26,3 +26,9 @@ cd /var/cache/apt/archives/
 
 # arch(查看软件架构)
 dpkg --print-architecture
+
+# 查看软件包的所有依赖(递归)
+apt-rdepends ros-melodic-ros-base | grep -E '^[a-zA-Z0-9]'
+
+# rsync sources.list镜像软件源命令
+sudo rsync -avzh rsync://mirrors.tuna.tsinghua.edu.cn/ubuntu/ `pwd`

@@ -11,7 +11,7 @@ $ rest_addr: cat /etc/hosts  | awk -F '#'  '($1) { print $1}' | awk '{print $NF}
 
 $src_branch: git branch -r --no-color | grep -v HEAD  | awk -F '/' '{print $2}'
 $dest_branch: git branch -r --no-color | grep -v HEAD  | awk -F '/' '{print $2}'
-$username: curl -s --header "PRIVATE-TOKEN: $LEADERF_GITLAB_ACCESS_TOKEN" "http://192.168.3.148/api/v4/projects/infra%2Fdatahook/members/all" | jq '.[].name'
+$username: curl -s --header "PRIVATE-TOKEN: $LEADERF_GITLAB_ACCESS_TOKEN" "http://192.168.3.148/api/v4/projects/`git remote show origin -n | grep -e "获取地址" -e "Fetch URL"  | sed  's/http:\/\///g' | sed 's/git@//g' | sed 's/.git//g' | tr ':' '/'  | awk -F '/' '{print $2"/"$3}' | jq -Rr @uri`/members/all" | jq '.[].name'
 
 # Merge which assign to me(查看所有指派给我的合并请求)
 
