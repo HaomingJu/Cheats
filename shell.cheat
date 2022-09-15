@@ -87,4 +87,7 @@ gpg --batch --passphrase "" --quick-generate-key "aptly (key for aptly) <aptly@a
 # urlencode (url编码)
 echo "<data>" | jq -Rr @uri
 
-# urldecode (url解码)
+
+% filesystem
+# directory size
+du -sh -h *

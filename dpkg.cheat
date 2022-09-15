@@ -3,6 +3,9 @@
 # 列出所有已安装的软件包
 pkg-config --list-all
 
+# 列出pkg-config的查找路径
+pkg-config --variable pc_path pkg-config
+
 # install autoreconf
 sudo apt-get install autoconf automake libtool
 
@@ -32,3 +35,6 @@ apt-rdepends ros-melodic-ros-base | grep -E '^[a-zA-Z0-9]'
 
 # rsync sources.list镜像软件源命令
 sudo rsync -avzh rsync://mirrors.tuna.tsinghua.edu.cn/ubuntu/ `pwd`
+
+# clean apt
+cd /var/lib/apt/lists && sudo rm -rf *

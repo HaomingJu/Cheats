@@ -14,3 +14,6 @@ cmake .. -DCMAKE_POSITION_INDEPENDENT_CODE=ON
 
 # 多线程构建
 make -j$(nproc)
+
+# 查找cmake官方提供的依赖模块(modules)
+cmake --help-module-list | grep Find

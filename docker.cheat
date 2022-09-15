@@ -31,3 +31,9 @@ $ user_name: cat /etc/passwd | grep home  | awk -F ':' '{print $1}'
 # execute script(在容器上后台执行一个命令)
 sudo docker exec -it <docker_name> /bin/bash -c 'gitlab-runner restart'
 $ docker_name: docker container ls --all | awk 'NR>1 {print $NF}'
+
+# load docker image(载入镜像)
+sudo docker load -i *.tar
+
+# save docker image(保存镜像)
+sudo docker save -o <image_name>.tar <image_name>
