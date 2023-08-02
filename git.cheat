@@ -12,3 +12,16 @@ git commit -m "`date --iso-8601`"
 # set upstream(设置分支的远程跟踪)
 git push -u origin <origin_branch>
 $ origin_branch: git branch -r --no-color | grep -v HEAD  | awk -F '/' '{print $2}'
+
+# 将某个仓库加入另一个仓库(非submodule方式)
+git subtree add --prefix=<path> <repo> <branch>
+
+
+# git设置加密时签名
+git config --global user.signingkey <key>
+
+# git提交自动签名, commit不再需要加-S
+git config --global commit.gpgsign true
+
+# 显示远程分支的创建者(show branch author)
+git for-each-ref --format='%(color:cyan)%(authordate:format:%m/%d/%Y %I:%M %p)    %(align:25,left)%(color:yellow)%(authorname)%(end) %(color:reset)%(refname:strip=3)' --sort=authordate refs/remotes

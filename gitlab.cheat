@@ -1,21 +1,6 @@
-% gitlab
+% GITLAB
 
 # Lint .gitlab-ci.yml(验证CI配置文件是否有语法错误)
 jq --null-input --arg yaml "$(<.gitlab-ci.yml)" '.content=$yaml' | curl "<proto>://<rest_addr>/api/v4/ci/lint?include_merged_yaml=true" --header 'Content-Type: application/json' --data @- | jq
-
 $ proto: echo "http https" | tr ' ' '\n'
 $ rest_addr: cat /etc/hosts  | awk -F '#'  '($1) { print $1}' | awk '{print $NF}'
-
-# mr: Create merge request(创建合并请求)
-<src_branch> <dest_branch> <title> <username>
-
-$src_branch: git branch -r --no-color | grep -v HEAD  | awk -F '/' '{print $2}'
-$dest_branch: git branch -r --no-color | grep -v HEAD  | awk -F '/' '{print $2}'
-$username: curl -s --header "PRIVATE-TOKEN: $LEADERF_GITLAB_ACCESS_TOKEN" "http://192.168.3.148/api/v4/projects/`git remote show origin -n | grep -e "获取地址" -e "Fetch URL"  | sed  's/http:\/\///g' | sed 's/git@//g' | sed 's/.git//g' | tr ':' '/'  | awk -F '/' '{print $2"/"$3}' | jq -Rr @uri`/members/all" | jq '.[].name'
-
-# Merge which assign to me(查看所有指派给我的合并请求)
-
-# Todos which assign to me(查看所有指派给我的TODOs)
-
-
-# Pipeline status(查看pipe状态)

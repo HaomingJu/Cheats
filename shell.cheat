@@ -91,3 +91,6 @@ echo "<data>" | jq -Rr @uri
 % filesystem
 # directory size
 du -sh -h *
+
+# 上传公钥至服务器
+gpg --keyserver keyserver.ubuntu.com --send-keys <key_id>
