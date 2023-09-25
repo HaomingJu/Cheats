@@ -94,3 +94,9 @@ du -sh -h *
 
 # 上传公钥至服务器
 gpg --keyserver keyserver.ubuntu.com --send-keys <key_id>
+
+# 查看端口占用(port)
+sudo fuser -v <port>/tcp
+
+# 杀掉占用特定端口的程序
+sudo fuser -k <port>/tcp

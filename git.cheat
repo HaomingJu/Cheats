@@ -25,3 +25,6 @@ git config --global commit.gpgsign true
 
 # 显示远程分支的创建者(show branch author)
 git for-each-ref --format='%(color:cyan)%(authordate:format:%m/%d/%Y %I:%M %p)    %(align:25,left)%(color:yellow)%(authorname)%(end) %(color:reset)%(refname:strip=3)' --sort=authordate refs/remotes
+
+# 归档,将某个提交进行打包给非git包(git archive)
+git archive HEAD -o HEAD.tar
