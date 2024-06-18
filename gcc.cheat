@@ -14,3 +14,7 @@ distccmon-gnome
 
 # distcc 查看集群列表
 distcc --show-hosts
+
+# coverage 代码覆盖率可视化
+lcov --capture --directory . --output-file coverage.info
+genhtml coverage.info --output-directory out

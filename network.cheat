@@ -1,0 +1,14 @@
+
+
+% network
+
+# 临时建立虚拟网卡
+ifconfig eth0:1 <ip>
+
+% wifi
+# list wiki
+nmcli dev wifi list
+
+# link wifi
+nmcli --ask dev wifi connect <wiki_name> password <wiki_pwd>
+

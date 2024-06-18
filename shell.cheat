@@ -100,3 +100,12 @@ sudo fuser -v <port>/tcp
 
 # 杀掉占用特定端口的程序
 sudo fuser -k <port>/tcp
+
+% wget
+# wget 获取带有密码认证的链接(从env中获取变量)
+wget --user=$<user_name> --password=$<password> <url>
+$ user_name: env | awk -F '=' '{print $1}' | grep -i USER
+$ password: env | awk -F '=' '{print $1}' | grep -i -e PASSWORD -e PASSWD 
+
+# 删除重复行
+cat /etc/hosts | sort -u

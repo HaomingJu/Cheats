@@ -9,6 +9,9 @@ cmake ../ --graphviz=graphviz.dot && dot -Tpng -o graphviz.png ./graphviz.dot
 # 加入-fPIC
 cmake .. -DCMAKE_POSITION_INDEPENDENT_CODE=ON
 
+# 在指定路径下寻找依赖
+cmake ../ -DCMAKE_PREFIX_PATH=/opt/cp3
+
 
 % make
 
