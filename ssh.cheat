@@ -1,9 +1,12 @@
 % ssh
 
 # 将秘钥写入远程机器, 下次直接使用秘钥登录
-
 ssh-copy-id -i ~/.ssh/id_rsa.pub <username>@<remote_ip>
 $ remote_ip: cat /etc/hosts  | awk -F '#'  '($1) { print $1}' | awk '{print $NF}'
 
 # 启动ssh服务
 sudo apt install openssh-server && service ssh start && echo "root:1" | chpasswd
+
+
+# 信任服务器指纹(Add key fingerprint too ~/.ssh/known_hosts)
+ssh-keyscan -H <remote_address> >> ~/.ssh/known_hosts
